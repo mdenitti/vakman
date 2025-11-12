@@ -53,7 +53,9 @@ function berekenPrijs(oppervlakte, tegelGrootte, voegBreedte) {
     lijmKg = Math.ceil(lijmKg); // Rond naar boven
     
     // Bereken de prijzen
-    const prijsTegels = oppervlakte * PRIJS_PER_M2;
+    // Bereken de werkelijke oppervlakte van de gekochte tegels
+    const werkelijkeOppervlakte = aantalTegels * oppervlakteTegel;
+    const prijsTegels = werkelijkeOppervlakte * PRIJS_PER_M2;
     const prijsLijm = lijmKg * PRIJS_LIJM_PER_KG;
     const subtotaal = prijsTegels + prijsLijm;
     

@@ -93,7 +93,8 @@ vakman/
 4. **Lijm & kosten**
    ```javascript
    lijmKg = Math.ceil(oppervlakte × LIJM_PER_M2)
-   prijsTegels = oppervlakte × PRIJS_PER_M2
+   werkelijkeOppervlakte = aantalTegels × oppervlakteTegel
+   prijsTegels = werkelijkeOppervlakte × PRIJS_PER_M2
    prijsLijm = lijmKg × PRIJS_LIJM_PER_KG
    ```
 
@@ -149,11 +150,12 @@ Voeg nieuwe opties toe in `index.html`:
 - Voegbreedte: 3 mm
 
 **Output:**
-- Aantal dozen: 7 dozen
+- Aantal dozen: 7 dozen (69 tegels)
+- Werkelijke tegeloppervlakte: 24,84 m²
 - Tegellijm: 88 kg
-- Subtotaal: €1.345,00
-- Korting: -€67,25 (5%)
-- **Totaalprijs: €1.277,75**
+- Subtotaal: €1.337,80
+- Korting: -€66,89 (5%)
+- **Totaalprijs: €1.270,91**
 
 ## 👨‍💻 Auteur
 
